@@ -3,7 +3,7 @@
 /*
 
 */
-A[] Source.SEND imply x==50
+A[] Source.SEND imply x>=50
 
 /*
 
