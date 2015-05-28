@@ -48,13 +48,26 @@ Sendo assim, o nossos autómatos temporais são:
 \section{QoS} 
 
 Neste exercício, devemos modelar um {\it{stream channel}} tal que:
-\begin{itemize}
+\begin{enumerate}
 \item A {\it{Source}} envia mensagens a cada 50ms;
-\item O {\it{Channel}} pode perder mensagens mas não mais que 20%;
+\item O {\it{Channel}} pode perder mensagens mas não mais que 20$\%$;
 \item Se a mensagem não chegar ao {\it{Reciever}} em 90ms, é considerada perdida: {\it{lost}};
 \item O {\it{Reciever}} recebe mensagens e demora 5ms a processá-las;
 \item Se em 1 segundo (1000 ms) não chegarem 15 mensagens, é gerada uma mensagem de erro: {\it{error}}.
-\end{itemize}
+\end{enumerate}
+
+Para resolver estes problemas, criamos 3 templates: {\it{Soucer}}, {\it{Worker}}, {\it{Source$\_$Worker}} e inserimos as seguintes especificações para solucionar os problemas acima mencionados:
+
+\begin{enumerate}
+\item No {\it{Source}}, o clock é reniciado e espera até chegar aos 50 ms para enviar a mensagem;
+\item Há um contador para as mensagens enviadas (msgSend) e as que foram perdidas (msgLost) e também foi criado uma função chamada {\it{value()}}. Assim que as mensagens perdidas atingirem mais que 20$\%$ das mensagens enviadas, o autómato pára a sua execução;
+\item Cada mensagem tem um relógio (solucionado através da introdução de um array de relógios). Quando o receiver recebe a mensagem, vê no respetivo  relógio se já passaram 90ms. Se já tiver passado, envia uma mensagem a avisar que essa mensagem foi perdida ({\it{lost!}}) ;
+\item Existe um nodo no {\it{Reciever}} chamado {\it{Process}} que só avança quando o seu temporizador chegar a 5ms;
+\item Há um contador geral e cada vez que atinge os 1000 ms (1 segundo), o {\it{Reciever}} vê quantas mensagens ja foram enviadas (msgSend), e se forem menos de 15 é diaparado um sincronismo {\it{error!}}.
+\end{enumerate}
+
+Para receber os sincronismos de falha ({\it{error, lost}}) e para receber o de sucesso {\it{reply}} existe o template {\it{Source$\_$Worker}}. No caso dos sincronismos de falha, renicia o autómato e no caso do 
+{\it{reply}} incrementa o numero de mensagens enviadas com sucesso (msgOK) e renicia o autómato.
 
 
 

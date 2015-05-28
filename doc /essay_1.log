@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.29)  28 MAY 2015 10:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.29)  28 MAY 2015 17:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -463,25 +463,38 @@ Package pdftex.def Info: door.jpg used on input line 44.
 (pdftex.def)             Requested size: 323.60327pt x 175.85388pt.
  [1
 
-{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2 <./e
-levator.jpg> <./door.jpg>] (./essay_1.aux) ) 
+{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 53.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 53.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 53.
+
+Overfull \hbox (21.90509pt too wide) in paragraph at lines 59--60
+[]\OT1/cmr/m/n/12 Para re-sol-ver es-tes pro-ble-mas, cri-a-mos 3 tem-pla-tes: 
+\OT1/cmr/m/it/12 Sou-cer\OT1/cmr/m/n/12 , \OT1/cmr/m/it/12 Wor-ker\OT1/cmr/m/n/
+12 , \OT1/cmr/m/it/12 Source$[]$Worker
+ []
+
+[2 <./elevator.jpg> <./door.jpg>] [3] (./essay_1.aux) ) 
 Here is how much of TeX's memory you used:
- 2878 strings out of 493315
- 39341 string characters out of 6137904
+ 2897 strings out of 493315
+ 39541 string characters out of 6137904
  199717 words of memory out of 5000000
- 6293 multiletter control sequences out of 15000+600000
- 5148 words of font info for 19 fonts, out of 8000000 for 9000
+ 6305 multiletter control sequences out of 15000+600000
+ 7329 words of font info for 26 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,5n,23p,276b,175s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on essay_1.pdf (2 pages, 151373 bytes).
+ 38i,5n,23p,313b,175s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2013
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2013/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2013/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on essay_1.pdf (3 pages, 156889 bytes).
 PDF statistics:
- 29 PDF objects out of 1000 (max. 8388607)
- 18 compressed objects within 1 object stream
+ 32 PDF objects out of 1000 (max. 8388607)
+ 20 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
