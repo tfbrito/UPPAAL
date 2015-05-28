@@ -1,0 +1,63 @@
+\documentclass[12pt]{article} % Default font size is 12pt, it can be changed here
+
+\usepackage{geometry} % Required to change the page size to A4
+\geometry{a4paper} % Set the page size to be A4 as opposed to the default US Letter
+
+\usepackage{graphicx} % Required for including pictures
+
+\usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+\usepackage{wrapfig} % Allows in-line images such as the example fish picture
+
+\usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\linespread{1.2} % Line spacing
+
+\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+
+\begin{document}
+José Pereira, Marta Azevedo, Tiago Brito
+
+\section{Elevador} % Major section
+
+Neste exercício, foi pedido para modelar um elevador autónomo que anda entre dois andares - {\it{Ground Floor}} e {\it{First Floor}}. As condições são as seguintes:
+\begin{itemize}
+\item O elevador pode parar no {\it{Ground Floor}} ou no {\it{First Floor}};
+\item Quando o elevador chega a um dado piso, a sua porta abre automaticamente.
+\item Leva 2 segundos a abrir a porta desde a sua chegada, mas a porta abre dentro de 5 segundos;
+\item Os passageiros podem entrar assim que a porta abrir;
+\item Os passageiros entram um por um e não há limite máximo de passageiros no elevador;
+\item A porta fecha 4 segundos depois do último passageiro entrar;
+\item Depois da porta fechar, o elevador espera 2 segundos e só então se desloca.
+\end{itemize}
+
+Para resolver este exercício, usámos 2 templates: {\it{Elevator}} e {\it{Door}}. 
+\\
+
+Foram necessários 5 canais de sincronização ({\it{open,close,up,down,enter}}), um relógio {\it{x}} que controla o tempo do elevador e uma variável {\it{waiting}} que significa o número de pessoas que está à espera para entrar no elevador.
+\\
+Sendo assim, o nossos autómatos temporais são:
+\begin{center}
+\includegraphics[scale=0.4]{elevator.jpg}
+\includegraphics[scale=0.4]{door.jpg}
+\end{center}
+
+
+\section{QoS} 
+
+Neste exercício, devemos modelar um {\it{stream channel}} tal que:
+\begin{itemize}
+\item A {\it{Source}} envia mensagens a cada 50ms;
+\item O {\it{Channel}} pode perder mensagens mas não mais que 20%;
+\item Se a mensagem não chegar ao {\it{Reciever}} em 90ms, é considerada perdida: {\it{lost}};
+\item O {\it{Reciever}} recebe mensagens e demora 5ms a processá-las;
+\item Se em 1 segundo (1000 ms) não chegarem 15 mensagens, é gerada uma mensagem de erro: {\it{error}}.
+\end{itemize}
+
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
