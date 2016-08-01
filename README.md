@@ -14,3 +14,7 @@ that the elevator has a sufficient capacity to accommodate any number of passeng
 
 Suggest a timed automaton model of the elevator. Use the actions up and down to model the movement of the elevator,
 open and close to describe the door operation and the action enter which means that a passenger is entering the elevator
+
+#####Run
+
+Use UPPAAL software available here: http://www.uppaal.org/
